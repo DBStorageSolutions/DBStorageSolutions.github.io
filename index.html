@@ -3,9 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Danish Brothers | Storage Solutions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Storage Solutions</h1>
+
+<header>
+    <div class="logo">Danish Brothers</div>
+    <nav>
+        <a href="#home" onclick="showHome()">Home</a>
+        <a href="#products">Products</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div id="mainContent">
+    <section class="hero" id="home">
+        <div class="video-background">
+            <!-- Replace dQw4w9WgXcQ with your YouTube video ID -->
+            <!-- Add ?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID for autoplay -->
+            <div class="video-background">
+                <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-interior-of-a-large-industrial-warehouse-34531-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-overlay"></div>
+        <div class="hero-content">
+            <h1>Quality Shelving Solutions</h1>
+            <p>Organize your business with heavy-duty racking and custom shelving systems designed for excellence and durability</p>
+            <a href="#catalog" class="btn">Explore Our Catalog</a>
+        </div>
+    </section>
+
+    <section class="features" id="products">
+        <div class="section-header">
+            <h2>Our Products</h2>
+            <p>Premium quality shelving and racking solutions</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400" 
+                     alt="Heavy Duty Racking" class="feature-img">
+                <h3>Heavy-Duty Racking</h3>
+                <p>Industrial strength warehouse solutions designed for maximum load capacity</p>
+            </div>
+            
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1565791380713-1756b9a05343?auto=format&fit=crop&q=80&w=400" 
+                     alt="Retail Shelving" class="feature-img">
+                <h3>Retail Shelving</h3>
+                <p>Modern display systems perfect for showrooms and retail spaces</p>
+            </div>
+            
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=400" 
+                     alt="Custom Fabrication" class="feature-img">
+                <h3>Custom Fabrication</h3>
+                <p>Tailored storage solutions designed specifically for your needs</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+        <div class="section-header">
+            <h2>Product Catalogs</h2>
+            <p>Browse our comprehensive product specifications and download PDFs</p>
+        </div>
+        
+        <div class="catalog-buttons">
+            <a href="#" class="catalog-btn" onclick="showCatalog('racking'); return false;">
+                <span class="catalog-btn-icon">🏗️</span>
+                <h3>Racking Catalog</h3>
+                <p>Heavy-duty warehouse storage solutions</p>
+            </a>
+            
+            <a href="#" class="catalog-btn" onclick="showCatalog('fabrication'); return false;">
+                <span class="catalog-btn-icon">⚙️</span>
+                <h3>Fabrication Catalog</h3>
+                <p>Custom steel work and specialized systems</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="process-section" id="process">
+        <div class="section-header">
+            <h2>Our Step-By-Step Process</h2>
+            <p>How we deliver excellence from consultation to installation</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Consultation</h4>
+                <p>We assess your space and understand your storage requirements to recommend the best solution</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Design & Planning</h4>
+                <p>Our experts create customized layouts and specifications tailored to your needs</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Manufacturing</h4>
+                <p>High-quality fabrication using premium materials and strict quality control</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Installation</h4>
+                <p>Professional installation by certified technicians ensuring safety and durability</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Let's discuss your shelving and storage needs</p>
+        </div>
+        
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+92 XXX XXXXXXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
+<!-- Racking Catalog Page -->
+<div id="rackingCatalog" class="catalog-page">
+    <button class="back-btn" onclick="showHome()">← Back to Home</button>
+    
+    <div class="section-header">
+        <h2>Racking Catalog</h2>
+        <p>Heavy-duty warehouse storage solutions</p>
+    </div>
+    
+    <div class="catalog-grid">
+        <div class="catalog-item">
+            <div class="pdf-icon">📦</div>
+            <h4>Pallet Racking</h4>
+            <p>Heavy-duty selective pallet racking systems for warehouse storage</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Pallet Racking')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🏗️</div>
+            <h4>Drive-In Racking</h4>
+            <p>High-density storage solutions for bulk inventory management</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Drive-In Racking')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">📐</div>
+            <h4>Cantilever Racking</h4>
+            <p>Specialized racking for long and bulky materials</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Cantilever Racking')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🔲</div>
+            <h4>Push Back Racking</h4>
+            <p>LIFO storage system with gravity flow design</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Push Back Racking')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">📊</div>
+            <h4>Carton Flow Racking</h4>
+            <p>FIFO picking system for case and carton storage</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Carton Flow Racking')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🎯</div>
+            <h4>Mobile Racking</h4>
+            <p>Space-saving mobile shelving systems on rails</p>
+            <button class="btn-secondary" onclick="alert('PDF Download: Mobile Racking')">Download PDF</button>
+        </div>
+    </div>
+</div>
+
+<!-- Fabrication Catalog Page -->
+<div id="fabricationCatalog" class="catalog-page">
+<button class="back-btn" onclick="showHome()">← Back to Home</button>
+    
+    <div class="section-header">
+        <h2>Fabrication Catalog</h2>
+        <p>Custom steel work and specialized industrial systems</p>
+    </div>
+    
+    <div class="catalog-grid">
+        <div class="catalog-item">
+            <div class="pdf-icon">🪜</div>
+            <h4>Mezzanine Floors</h4>
+            <p>Custom-built raised platforms to double your warehouse floor space</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🛠️</div>
+            <h4>Industrial Workbenches</h4>
+            <p>Heavy-duty steel work tables for assembly and maintenance</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🛒</div>
+            <h4>Warehouse Trolleys</h4>
+            <p>Custom material handling equipment and transport carts</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🚧</div>
+            <h4>Safety Barriers</h4>
+            <p>Protection guardrails and bollards for warehouse safety</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🔩</div>
+            <h4>Custom Steel Racks</h4>
+            <p>Specialized racks for non-standard items and heavy components</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+        
+        <div class="catalog-item">
+            <div class="pdf-icon">🚪</div>
+            <h4>Industrial Cages</h4>
+            <p>Secure storage partitions and gas cylinder enclosures</p>
+            <button class="btn-secondary" onclick="window.open('YOUR_DRIVE_LINK_HERE', '_blank')">Download PDF</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="logo" style="background: white; -webkit-background-clip: text; color: white; margin-bottom: 20px;">Danish Brothers</div>
+            <p>Premium shelving and racking solutions for industrial, retail, and commercial spaces. Built for strength, designed for efficiency.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#home" onclick="showHome()">Home</a>
+            <a href="#products" onclick="showHome()">Products</a>
+            <a href="#catalog" onclick="showHome()">Catalog</a>
+            <a href="#contact" onclick="showHome()">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/shelvingsystem" target="_blank">FB</a>
+                <a href="http://instagram.com/danishbrothers_/" target="_blank">IG</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Danish Brothers. All rights reserved. | Quality You Can Trust</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/+923458905002?text=Hi, Reached you out from website. I want information regarding ..." class="whatsapp-float" target="_blank">
+    <span class="wa-icon">💬</span> Chat with an Expert
+</a>
+
+<script>
+    function showCatalog(type) {
+        // Hide all pages
+        document.getElementById('mainContent').style.display = 'none';
+        document.getElementById('rackingCatalog').classList.remove('active');
+        document.getElementById('fabricationCatalog').classList.remove('active');
+        
+        // Show selected catalog
+        if(type === 'racking') {
+            document.getElementById('rackingCatalog').classList.add('active');
+        } else if(type === 'fabrication') {
+            document.getElementById('fabricationCatalog').classList.add('active');
+        }
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    function showHome() {
+        // Show main content
+        document.getElementById('mainContent').style.display = 'block';
+        
+        // Hide all catalog pages
+        document.getElementById('rackingCatalog').classList.remove('active');
+        document.getElementById('fabricationCatalog').classList.remove('active');
+    }
+
+    // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if(href.startsWith('#')) {
+                e.preventDefault();
+                showHome(); // Ensure home is visible first
+                const target = document.querySelector(href);
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(30px)";
+        section.style.transition = "all 0.8s ease-out";
+        observer.observe(section);
+    });
+</script>
+
 </body>
-</html> 
+</html>
