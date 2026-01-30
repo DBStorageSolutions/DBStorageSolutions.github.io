@@ -8,15 +8,15 @@
 }
 
 :root {
-    --primary-gold: #c9a961;
-    --dark-gold: #a88845;
-    --light-gold: #e8d7b3;
-    --accent-gold: #d4af37;
-    --cream-bg: #faf8f3;
+    --primary-gold: #E0C250; /* Brand (Logo) Safety Yellow - darker for better contrast */
+    --dark-gold: #334155;    /* Primary Base - Steel Charcoal */
+    --light-gold: #FDEFB0;   /* light accent for borders */
+    --accent-gold: #EA580C;  /* Accent/Action Safety Orange */
+    --cream-bg: #F1F5F9;     /* Background - Concrete Grey */
     --white-bg: #ffffff;
-    --light-cream: #f5f2ea;
-    --text-dark: #2c2416;
-    --text-gray: #6b5d4f;
+    --light-cream: #f8fafc;
+    --text-dark: #1E293B;    /* Text Deep Iron */
+    --text-gray: #6b7280;
     --border-light: #e8dcc8;
     --shadow-sm: 0 2px 8px rgba(201, 169, 97, 0.1);
     --shadow-md: 0 4px 16px rgba(201, 169, 97, 0.15);
@@ -68,7 +68,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    background: var(--primary-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -102,7 +102,7 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--primary-gold), var(--accent-gold));
+    background: var(--primary-gold);
     transition: width 0.3s ease;
 }
 
@@ -148,7 +148,8 @@ nav a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(201, 169, 97, 0.85), rgba(168, 136, 69, 0.75));
+    /* dark overlay behind hero text */
+    background: rgba(30,41,59,0.70); /* #1E293B with opacity */
     z-index: 1;
 }
 
@@ -158,6 +159,25 @@ nav a:hover::after {
     max-width: 900px;
     padding: 0 2rem;
     animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Center hero content vertically and horizontally */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.hero-content .btn {
+    margin-top: 0.5rem;
+}
+
+/* Nudge hero content down by 10px as requested */
+.hero-content {
+    margin-top: 150px;
 }
 
 @keyframes fadeInUp {
@@ -174,7 +194,7 @@ nav a:hover::after {
 .hero-content h1 {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin-bottom: -0.5rem;
     line-height: 1.1;
     color: white;
     text-shadow: 2px 4px 12px rgba(44, 36, 22, 0.3);
@@ -182,7 +202,7 @@ nav a:hover::after {
 
 .hero-content p {
     font-size: 1.3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom:0.5rem;
     color: white;
     text-shadow: 1px 2px 8px rgba(44, 36, 22, 0.3);
 }
@@ -190,7 +210,7 @@ nav a:hover::after {
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
+    background: darkgoldenrod;
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -238,7 +258,7 @@ section {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    background: var(--primary-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -278,7 +298,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(201, 169, 97, 0.05), rgba(168, 136, 69, 0.05));
+    background: rgba(250,204,21,0.045);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -353,7 +373,7 @@ section {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.1), transparent);
+    background: rgba(250,204,21,0.08);
     transform: translate(-50%, -50%);
     transition: width 0.6s ease, height 0.6s ease;
 }
@@ -422,7 +442,7 @@ section {
 .step-number {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    background: var(--primary-gold);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -506,7 +526,7 @@ section {
 .btn-submit {
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    background: var(--primary-gold);
     color: white;
     border: none;
     border-radius: 10px;
@@ -617,7 +637,7 @@ section {
 
 .btn-secondary {
     padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    background: var(--primary-gold);
     color: white;
     border: none;
     border-radius: 8px;
@@ -696,6 +716,13 @@ footer {
     color: white;
 }
 
+.social-icons a img.social-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    object-fit: contain;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -710,19 +737,19 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
+    background: transparent; /* transparent so Wikimedia image renders as-is */
+    color: inherit;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     text-decoration: none;
-    font-weight: 600;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.8rem;
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     z-index: 999;
-    transition: all 0.3s ease;
-    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 @keyframes pulse {
@@ -735,12 +762,120 @@ footer {
 }
 
 .whatsapp-float:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 40px rgba(37, 211, 102, 0.6);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
 }
+
+.wa-logo {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+/* Ensure inline SVG paths use white fill when inside the button */
+/* Remove SVG path override so Wikimedia SVG displays correctly */
 
 .wa-icon {
     font-size: 1.5rem;
+}
+
+/* Chat popup styles */
+.chat-popup {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 320px;
+    max-width: calc(100% - 60px);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transform: translateY(20px) scale(0.98);
+    opacity: 0;
+    transition: all 0.22s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-popup.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background: var(--primary-gold);
+    color: white;
+}
+
+.chat-title {
+    font-weight: 700;
+}
+
+.chat-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 1rem;
+    max-height: 220px;
+    overflow-y: auto;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.chat-message {
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    max-width: 85%;
+    font-size: 0.95rem;
+}
+
+.chat-message.agent {
+    background: #fff;
+    align-self: flex-start;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.chat-message.user {
+    background: var(--primary-gold);
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.8rem;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    background: white;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+.chat-input-area button {
+    background: var(--primary-gold);
+    color: white;
+    border: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
 }
 
 /* ===================================
@@ -859,6 +994,13 @@ footer {
         border-radius: 50%;
         width: 60px;
         height: 60px;
-        justify-content: center;
+        background: var(--primary-gold);
+    }
+
+    .chat-popup {
+        right: 16px;
+        left: 16px;
+        bottom: 80px;
+        width: auto;
     }
 }
